@@ -8,7 +8,58 @@ module.exports = {
       fontFamily: {
         'DancingScript': ['Dancing Script', 'cursive'],
       },
+      animation: {
+        'fade-in': 'fadeIn 1s ease-out', // fade-in animation for the page
+        'text-fade-in': 'textFadeIn 1.5s ease-out', // text fade-in for "Abhishek"
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        textFadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
     },
   },
   plugins: [],
 };
+
+
+
+
+
+
+module.exports = {
+  content: [
+    "./src/**/*.{html,js,jsx}", // Make sure Tailwind processes your components
+  ],
+  theme: {
+    extend: {
+      animation: {
+        'fade-in': 'fadeIn 1s ease-out', // fade-in animation for the page
+        'text-fade-in': 'textFadeIn 1.5s ease-out', // text fade-in for "Abhishek"
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        textFadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+    },
+  },
+  plugins: [],
+}
+
+
+
+
+
+
+
