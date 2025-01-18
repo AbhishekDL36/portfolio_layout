@@ -1,9 +1,10 @@
 
 import { createContext, useEffect, useState } from 'react';
-import Mainfile from './Mainfile';
+
 import './styles.css'
-import ReactSection from './ReactSection';
+
 import Welcomepage from './Welcomepage';
+import PageRendering from './PageRendering';
 
 export const myContext= createContext()
 function App() {
@@ -15,12 +16,12 @@ function App() {
       <myContext.Provider value={{isTrue,setisTrue}}>
       {
   isTrue?
- <Mainfile/>
+ <PageRendering/>
   :<Welcomepage/>
  }
   
       </myContext.Provider>
-  <ReactSection/>
+  
     </div>
   );
 }

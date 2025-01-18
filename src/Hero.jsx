@@ -3,8 +3,9 @@
 
 import { motion } from "framer-motion"; // Import motion for animations
 import {ReactTyped} from "react-typed"; // Import Typed for typing animation
-
+import { Link } from "react-router-dom";
 import { FaReact, FaJsSquare, FaGithub } from "react-icons/fa"; // Import GitHub, React, and JS Icons
+
 import img1 from "./WhatsApp Image 2025-01-18 at 1.00.45 PM.jpeg"; // Your image import
 
 function Hero() {
@@ -75,15 +76,19 @@ function Hero() {
 
         {/* Development Icons (React, JS, GitHub) */}
         <div className="mt-6 flex justify-center gap-8 mb-8"> {/* Increased gap and margin-bottom */}
-          <div className="text-4xl text-blue-500">
+         <Link to="/React-Skills"> <div className="text-4xl text-blue-500">
             <FaReact />
-          </div>
-          <div className="text-4xl text-yellow-500">
+          </div> </Link> 
+        <Link to="/JS-Skills"> 
+        <div className="text-4xl text-yellow-500">
             <FaJsSquare />
           </div>
+        </Link>  
           <div className="text-4xl text-gray-900">
-            <FaGithub />
+         <a href="https://github.com/AbhishekDL36"> <FaGithub /></a>   
           </div>
+
+        
         </div>
 
         {/* Button */}
