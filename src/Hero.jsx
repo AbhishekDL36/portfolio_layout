@@ -1,9 +1,11 @@
 
 
-import { motion } from "framer-motion";
-import { ReactTyped as Typed } from "react-typed";
 
-import img1 from "./WhatsApp Image 2025-01-18 at 1.00.45 PM.jpeg";
+import { motion } from "framer-motion"; // Import motion for animations
+import {ReactTyped} from "react-typed"; // Import Typed for typing animation
+
+import { FaReact, FaJsSquare, FaGithub } from "react-icons/fa"; // Import GitHub, React, and JS Icons
+import img1 from "./WhatsApp Image 2025-01-18 at 1.00.45 PM.jpeg"; // Your image import
 
 function Hero() {
   return (
@@ -29,7 +31,7 @@ function Hero() {
 
       {/* Content */}
       <div className="container mx-auto flex flex-col items-center text-center px-4 relative z-10">
-        {/* Image with Rotational Animation */}
+        {/* Profile Image and Heading */}
         <motion.div
           initial={{ scale: 0, rotate: -45, opacity: 0 }}
           animate={{ scale: 1, rotate: 0, opacity: 1 }}
@@ -43,7 +45,7 @@ function Hero() {
           />
         </motion.div>
 
-        {/* Heading with Dynamic Typing Effect */}
+        {/* Heading */}
         <motion.h2
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -63,19 +65,28 @@ function Hero() {
           transition={{ duration: 1.2, delay: 0.5, type: "spring", stiffness: 50 }}
           className="mt-2 text-lg text-gray-300 max-w-2xl"
         >
-          <Typed
-            strings={[
-              "Frontend Developer",
-              "React Developer",
-              "JavaScript Developer",
-            ]}
+          <ReactTyped
+            strings={["Frontend Developer", "React Developer", "JavaScript Developer"]}
             typeSpeed={50}
             backSpeed={30}
             loop
           />
         </motion.div>
 
-        {/* Button Animation */}
+        {/* Development Icons (React, JS, GitHub) */}
+        <div className="mt-6 flex justify-center gap-8 mb-8"> {/* Increased gap and margin-bottom */}
+          <div className="text-4xl text-blue-500">
+            <FaReact />
+          </div>
+          <div className="text-4xl text-yellow-500">
+            <FaJsSquare />
+          </div>
+          <div className="text-4xl text-gray-900">
+            <FaGithub />
+          </div>
+        </div>
+
+        {/* Button */}
         <motion.a
           animate={{
             scale: [1, 1.1, 1], // Zoom in and out

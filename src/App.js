@@ -2,7 +2,9 @@
 import { createContext, useEffect, useState } from 'react';
 import Mainfile from './Mainfile';
 import './styles.css'
+import ReactSection from './ReactSection';
 import Welcomepage from './Welcomepage';
+
 export const myContext= createContext()
 function App() {
   const [isTrue,setisTrue]= useState(false)
@@ -16,9 +18,9 @@ function App() {
  <Mainfile/>
   :<Welcomepage/>
  }
-   
-      </myContext.Provider>
   
+      </myContext.Provider>
+  <ReactSection/>
     </div>
   );
 }
