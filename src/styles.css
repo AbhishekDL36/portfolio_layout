@@ -1,0 +1,13 @@
+.name{
+    animation: animatename 5s ease-in infinite;
+}
+
+@keyframes animatename{
+    0%{
+        scale: 1;
+    }
+  
+    100%{
+        scale: 2.5;
+    }
+}
