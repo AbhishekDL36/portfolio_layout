@@ -1,5 +1,6 @@
 .name{
     animation: animatename 5s ease-in infinite;
+    font-family: cursive;
 }
 
 @keyframes animatename{
