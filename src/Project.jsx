@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -44,40 +45,35 @@ const itemVariants = {
   },
 };
 
-const gradientColors = "from-blue-500 to-purple-500"
- 
-
-
 function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen py-20 flex items-center justify-center bg-gray-900 borderbtm"
+      className="min-h-screen py-20 flex items-center justify-center bg-gray-900 border-b border-gray-700"
     >
       <div className="container mx-auto text-center relative">
-        <h3 className="text-[70px] font-bold text-white mb-16 font-playfair">
+
+         
+        <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-16 font-playfair">
           Projects
         </h3>
-        <div className="satellite-container">
-        <div className="satellite"></div>
-      </div>
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
+
+        
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className={`bg-gradient-to-r ${gradientColors} rounded-lg shadow-lg p-6`}
+              className="bg-gray-700 h-auto p-6 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
               variants={itemVariants}
               whileHover="hover"
             >
-              <h4 className="text-2xl font-bold text-white">
-                {project.title}
-              </h4>
-              <p className="mt-4 text-gray-200">{project.description}</p>
+              <h4 className="text-2xl font-bold text-white">{project.title}</h4>
+              <p className="mt-4 text-gray-300">{project.description}</p>
               <a
                 href={project.link}
                 className="mt-4 inline-block bg-white text-blue-500 px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition-colors duration-300"
@@ -89,6 +85,7 @@ function Projects() {
           ))}
         </motion.div>
       </div>
+    
     </section>
   );
 }
