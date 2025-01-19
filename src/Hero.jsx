@@ -1,12 +1,12 @@
 
 
 
-import { motion } from "framer-motion"; // Import motion for animations
-import {ReactTyped} from "react-typed"; // Import Typed for typing animation
+import { motion } from "framer-motion"; 
+import {ReactTyped} from "react-typed"; 
 import { Link } from "react-router-dom";
-import { FaReact, FaJsSquare, FaGithub } from "react-icons/fa"; // Import GitHub, React, and JS Icons
+import { FaReact, FaJsSquare, FaGithub } from "react-icons/fa"; 
+import img1 from "./WhatsApp Image 2025-01-18 at 1.00.45 PM.jpeg"; 
 
-import img1 from "./WhatsApp Image 2025-01-18 at 1.00.45 PM.jpeg"; // Your image import
 
 function Hero() {
   return (
@@ -17,22 +17,14 @@ function Hero() {
       className="bg-gray-900 text-white py-20 relative overflow-hidden"
       id="hero"
     >
-      {/* Background Animation */}
-      <motion.div
-        animate={{
-          background: [
-            "linear-gradient(to right, #000000, #1a1a1a)",
-            "linear-gradient(to right, #1a1a1a, #333333)",
-            "linear-gradient(to right, #333333, #000000)",
-          ],
-        }}
-        transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-0"
-      ></motion.div>
+      {/* Satellite Effect */}
+      <div className="satellite-container">
+        <div className="satellite"></div>
+      </div>
 
-      {/* Content */}
+      {/* Main Content */}
       <div className="container mx-auto flex flex-col items-center text-center px-4 relative z-10">
-        {/* Profile Image and Heading */}
+        {/* Profile Image */}
         <motion.div
           initial={{ scale: 0, rotate: -45, opacity: 0 }}
           animate={{ scale: 1, rotate: 0, opacity: 1 }}
@@ -54,7 +46,7 @@ function Hero() {
           className="text-5xl font-extrabold mt-6 text-gray-100"
         >
           Hi, I'm{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-100">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">
             Your Name
           </span>
         </motion.h2>
@@ -74,32 +66,34 @@ function Hero() {
           />
         </motion.div>
 
-        {/* Development Icons (React, JS, GitHub) */}
-        <div className="mt-6 flex justify-center gap-8 mb-8"> {/* Increased gap and margin-bottom */}
-         <Link to="/React-Skills"> <div className="text-4xl text-blue-500">
-            <FaReact />
-          </div> </Link> 
-        <Link to="/JS-Skills"> 
-        <div className="text-4xl text-yellow-500">
-            <FaJsSquare />
-          </div>
-        </Link>  
+        {/* Development Icons */}
+        <div className="mt-6 flex justify-center gap-8 mb-8">
+          <Link to="/React-Skills">
+            <div className="text-4xl text-blue-500">
+              <FaReact />
+            </div>
+          </Link>
+          <Link to="/JS-Skills">
+            <div className="text-4xl text-yellow-500">
+              <FaJsSquare />
+            </div>
+          </Link>
           <div className="text-4xl text-gray-900">
-         <a href="https://github.com/AbhishekDL36"> <FaGithub /></a>   
+            <a href="https://github.com/AbhishekDL36">
+              <FaGithub />
+            </a>
           </div>
-
-        
         </div>
 
         {/* Button */}
         <motion.a
           animate={{
-            scale: [1, 1.1, 1], // Zoom in and out
+            scale: [1, 1.1, 1],
             boxShadow: [
               "0px 0px 5px rgba(255, 255, 255, 0.3)",
               "0px 0px 15px rgba(255, 255, 255, 0.5)",
               "0px 0px 5px rgba(255, 255, 255, 0.3)",
-            ], // Glow effect
+            ],
           }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           whileHover={{
