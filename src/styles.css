@@ -94,5 +94,10 @@
   .nav-link:hover::after {
     transform: scaleX(1); 
   }
+
+ .bgAbout{
+  background: rgb(48,77,209);
+background: linear-gradient(90deg, rgba(48,77,209,1) 10%, rgba(192,200,231,1) 50%, rgba(29,52,146,1) 79%, rgba(48,77,209,1) 100%);
+ }
   
   
