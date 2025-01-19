@@ -445,8 +445,11 @@ function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center relative bg-gradient-to-b from-blue-800 to-purple-800"
+      className="min-h-screen flex items-center justify-center relative bg-gray-900 borderbtm"
     >
+      <div className="satellite-container">
+        <div className="satellite"></div>
+      </div>
       <div className="absolute inset-0 bg-black opacity-50"></div> {/* Overlay for readability */}
       <div className="container mx-auto text-center relative z-10 p-5">
         <h3 className="text-[70px] font-bold mb-[100px] font-playfair text-white">About Me</h3>

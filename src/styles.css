@@ -99,5 +99,44 @@
   background: rgb(48,77,209);
 background: linear-gradient(90deg, rgba(48,77,209,1) 10%, rgba(192,200,231,1) 50%, rgba(29,52,146,1) 79%, rgba(48,77,209,1) 100%);
  }
-  
-  
+
+ .project-box {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: #f9fafb; /* Light background for content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.project-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 0.5rem;
+  background: linear-gradient(270deg, #007bff, #00d4ff);
+  background-size: 400% 400%;
+  animation: border-move 5s linear infinite;
+  transition: all 0.3s ease;
+}
+
+.project-box:hover::before {
+  filter: brightness(1.2);
+}
+
+@keyframes border-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.borderbtm{
+  border-bottom:2px solid white ;
+}

@@ -10,11 +10,14 @@ import img1 from "./WhatsApp Image 2025-01-18 at 1.00.45 PM.jpeg";
 
 function Hero() {
   return (
+    <div >
+
+ 
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="bg-gray-900 text-white py-20 relative overflow-hidden"
+      className="bg-gray-900 text-white py-20 relative overflow-hidden borderbtm"
       id="hero"
     >
       {/* Satellite Effect */}
@@ -107,6 +110,7 @@ function Hero() {
         </motion.a>
       </div>
     </motion.section>
+    </div>
   );
 }
 
