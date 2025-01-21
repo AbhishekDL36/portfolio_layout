@@ -13,6 +13,7 @@ const skills = [
   { name: "Javascript", bg: "bg-purple-100", text: "text-purple-500" },
   { name: "Typescript", bg: "bg-blue-100", text: "text-blue-500" },
   { name: "Node", bg: "bg-green-100", text: "text-green-500" },
+  { name: "Express",  bg: "bg-yellow-100", text: "text-yellow-500" },
 ];
 
 function Skills() {
