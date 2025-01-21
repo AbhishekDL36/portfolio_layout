@@ -49,7 +49,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen py-20 flex items-center justify-center bg-gray-900 border-b border-gray-700"
+      className="min-h-screen py-20 flex items-center justify-center bg-gray-900 borderbtm "
     >
       <div className="container mx-auto text-center relative">
 

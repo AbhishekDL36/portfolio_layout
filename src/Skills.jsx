@@ -38,17 +38,24 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen py-20 flex items-center justify-center bg-gray-900"
+      className="min-h-screen py-20 flex items-center justify-center bg-gray-900 borderbtm"
     >
+
+
+
       <div className="container mx-auto text-center relative">
+     
         <h3 className="text-[70px] font-bold text-white mb-16 font-playfair">
-          Skills
+       
+      Skills
         </h3>
+       
         <motion.div
           className="flex flex-wrap justify-center gap-6"
           initial="hidden"
           animate="visible"
         >
+           
           {shuffledSkills.map((skill, index) => (
             <motion.span
               key={index}

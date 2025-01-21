@@ -1,6 +1,6 @@
 
 import About from "./About";
-import Contact from "./Contact";
+
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
@@ -15,7 +15,7 @@ function Mainfile() {
       <About />
       <Projects />
       <Skills />
-      <Contact />
+  
       <Footer />
     </div>
   );
